@@ -1,31 +1,248 @@
-/* ...existing code... */
-html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: 'Nunito', sans-serif;
-    background: #fafafa;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
 }
 
-/* Logo */
-img{
+.wrapper {
+  width: 1204px;
+  margin: auto;
+  padding: 20px 0px 20px 0px;
+}
+
+/*
+ini adalah menu
+*/
+nav {
+  background-color: #3E5F44;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  align-items: center; /* diperbaiki */
+}
+
+.menu {
+  width: 50%;
+}
+
+.menu > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+}
+
+.menu > ul > li > a {
+  text-decoration: none;
+  color: #fff;
+}
+.logo {
+  display: flex;
+  align-items: center; /* diperbaiki */
+}
+
+.logo > img {
+  height: 45px;
+}
+
+/*
+ini adalah hero /jumbotron
+*/
+header {
+  background: url(../img/gambarsekolah.jpg);
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
-  width: 100%;
-  height: 100;
-}
-/* Navigasi */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 32px 0;
-    display: flex;
-    gap: 32px;
-    justify-content: center;
-    border-radius: 8px;
 }
 
-h3{
-  text-align: center;
-  color: black;
-  font-size: large;
+.header-opacity {
+  background-color: #222831;;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
+.header-jumbotron {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  letter-spacing: 5px;
+  text-shadow: 0 0 4px #000;
+}
+
+.header-jumbotron > h4 {
+  color: #78C841;
+  font-size: 2rem;
+  margin: 0px;
+  padding: 0px;
+}
+.header-jumbotron > h5 {
+  color: #fff;
+  margin: 0px;
+  padding: 5px;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+
+}
+.header-jumbotron > p{
+  padding: 5px;
+  margin: 0px 5px 0px 5px;
+  color: #fff;
+
+}
+a{
+  text-decoration: none;
+  color: #333;
+  text-shadow: none;
+}
+.button{
+  background-color: #78C841;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  font-family: 'Kanit', sans-serif;
+}
+
+.button-xl{
+  font-size: 1.4rem;
+  padding: 20px;
+  
+}
+
+/*
+*Statistic
+*/
+/* Statistic box rapi */
+#statistic > .wrapper > div {
+  text-align: center;
+}
+#statistic{
+  background-color: #73946B;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+}
+
+#statistic >.wrapper{
+  padding: 50px;
+  width:80%;
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px;
+}
+
+/* Ikon dan angka sejajar dan rapi */
+#statistic > .wrapper > div > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+
+/* Teks bawah benar-benar rata tengah */
+#statistic > .wrapper > div > small {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Premium Course */
+#premium-course{
+  background-color: #3E5F44;
+  color: #fff;
+}
+/* Premium Course */
+#premium-course >.wrapper > h4{
+text-align: center;
+font-size: 2.8rem;
+margin: 0px;
+padding: 0px;
+font-family: 'Kanit', sans-serif;
+}
+
+#premium-course >.wrapper > h4 > span{
+  color: #ffce10;
+}
+
+#premium-course > .wrapper > p{
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 50px;
+
+}
+
+.grid > .item{
+  border: 1px solid #666;
+background-color: #393E46;
+border-radius: 5px;
+position:relative;
+}
+
+.grid > .item >img{
+  width: 15%;
+  position:absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.grid > .item > .item-detail{
+  padding: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: 70%;
+}
+
+.grid > .item > .item-detail > div{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.grid > .item > .item-detail > div > small{
+  color: #ccc;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
